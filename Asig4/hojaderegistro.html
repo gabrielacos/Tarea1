@@ -1,101 +1,132 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="es">
+
 <head>
-
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/coloquio.css" />
-	<title>Coloquio-Cafe</title>
+    <title>Coloquio-Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-	<header>
-        <!--Banner y Navbar-->
-        <h1><img src="img/logo.png" />Coloquio</h1>
-        <h2><em>Libreria, Cafe y Papeleria </em></h2>
-        </header>
-           
+
+    <header>
+
+        <div class="jumbotron">
+            <!--Banner y Navbar-->
+            <h1><img src="img/logo.png" width="304" height="236" />Coloquio</h1>
+            <h2><em>Libreria, Cafe y Papeleria </em></h2>
+        </div>
+
+    </header>
+
+
+    <div class="container">.
         <!--Navegador:Home,Libreria,Cafe,Papeleria,Registro-->
-        <nav>
-            <ul class="navul">
-                <li class="navli"><a href="index.html">Home</a></li>
-                <li class="navli"><a href="libreria.html">Libreria</a></li>
-                <li class="navli"><a href="papeleria.html">Papeleria</a></li>
-                <li class="navli"><a href="cafe.html">Cafe</a></li>
-                <li class="navli"><a href="hojaderegistro.html">Registro</a></li>
-            </ul>
-        </nav>
-		<br />
-		<em>Libreria, Cafe y Papeleria </em>
-	
-    <div>
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="libreria.html">Libreria</a></li>
+                        <li><a href="papeleria.html">Papeleria</a></li>
+                        <li><a href="cafe.html">Cafe</a></li>
+                        <li><a href="hojaderegistro.html">Registro</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+        <div class="container"></div>
+
         <h1>Hoja de Registro</h1>
+
         <form action="http://mtj-web.com/ecomm02/registro.php" method="post">
-            <table>
-                <tr>
-                    <td><p>Nombre</p></td>
-                    <td><input type="text" name="nombre" size="30" maxlength="30" required></td>
-                </tr>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Nombre</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" name="nombre" size="30" maxlength="30" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Apellidos</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" name="apellidos" size="30" maxlength="30" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Email</label>
+                <div class="col-10">
+                    <input class="form-control" type="email" name="email" size="30" maxlength="30" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Contrasena</label>
+                <div class="col-10">
+                    <input class="form-control" type="password" name="password1" size="30" maxlength="30" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="example-text-input" class="col-2 col-form-label">Repita Contrasena</label>
+                <div class="col-10">
+                    <input class="form-control" type="password" name="password2" size="30" maxlength="30" required>
+                </div>
+            </div>
+            <fieldset class="form-group row">
+                <legend class="col-form-legend col-sm-2">Radios</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <label class="form-check-label">
+            <input type="radio" name="genero" value="F">
+            Femenina
+          </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+            <input type="radio" name="genero" value="M">
+            Masculino
+          </label>
+                    </div>
+                </div>
 
-                <tr>
-                    <td><p>Apellido</p></td>
-                    <td><input type="text" name="apellidos" size="30" maxlength="30" required></td>
-                </tr>
-                <tr>
-                    <td><p>Email</p></td>
-                    <td><input type="email" name="email" size="100" maxlength="150" required></td>
-                </tr>
-                <tr>
-                    <td><p>Password</p></td>
-                    <td><input type="password" name="password1" size="15" maxlength="15" required></td>
-                </tr>
-                <tr>
-                    <td><p>Repita Contrase�a</p></td>
-                    <td><input type="password" name="password2" size="20" maxlength="35" required></td>
-                </tr>
-            </table>
-            <br />
-            <br />
-            <fieldset>
-                <legend>Genero</legend>
-                <p><input type="radio" name="genero" value="F" />Femenino</p>
-                <p><input type="radio" name="genero" value="M" />Masculino</p>
             </fieldset>
-            <br />
-            <br />
 
-            <p>
-                Interes Principal
-                <select name="inter�s principal">
+
+            Interes Principal
+            <select class="form-control" name="inter�s principal">   Interes Principal
                     <option value="lib">Libreria</option>
                     <option value="pap">Papeleria</option>
                     <option value="caf">Cafe</option>
                 </select>
-            </p>
-            <p>
-                <input type="checkbox" checked name="opci�n anuncios" /> Deseo Sabes sobrectividades y ofertas
-            </p>
-            <br />
-            <p><em>Al registrarme aceptos los terminos de servicio y politica de privacidad de Coloquio</em></p>
+            <div class="form-group row">
+                <label class="col-sm-2">Dese saber sobreactividades y ofertas</label>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"  checked name="opci�n anuncios">
+          </label>
+                    </div>
+                </div>
+            </div>
 
-            <button type="submit">Submit</button>
-            <button type="reset">Borrar</button>
 
-
-
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="reset" class="btn btn-danger">Borrar</button>
 
         </form>
     </div>
 
-	<!--Este es el footer de la pagina-->
-	<footer>
-		<hr />
-		<div>
-			<em>Copyright2014&copy;Coloquio Inc</em>
-			<br />
-			<a href="mailto:"mariatjimenez@upr.edu">mariatjimenez@upr.edu</a>
-		</div>
-
-	</footer>
+    <!--Este es el footer de la pagina-->
+    </footer>
+    <footer>
+        <hr />
+        <div class="jumbotron">
+            <em>Copyright2014&copy;Coloquio Inc</em>
+            <br />
+            <a href="mailto:" mariatjimenez@upr.edu ">mariatjimenez@upr.edu</a>
+    </div>
+    </footer>
 </body>
 </html>
-
