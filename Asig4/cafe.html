@@ -1,46 +1,61 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="es">
-<head>
-    <link rel="stylesheet" href="css/coloquio.css" />
 
-    <title>Coloquio-Cafe</title>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/coloquio.css" />
+    <title>Coloquio-Inicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
     <header>
-        <!--Banner y Navbar-->
-        <h1><img src="/img/logo.png" />Coloquio</h1>
-        <h2><em>Libreria, Cafe y Papeleria </em></h2>
+        <div class="jumbotron">
+            <!--Banner y Navbar-->
+            <h1><img src="img/logo.png" width="304" height="236" />Coloquio</h1>
+            <h2><em>Libreria, Cafe y Papeleria </em></h2>
+        </div>
+
     </header>
 
-    <div>
-        <!--Navegador:Home,Libreria,Cafe,Papeleria-->
-        <nav>
-            <ul class="navul">
-                <li class="navli"><a href="index.html">Home</a></li>
-                <li class="navli"><a href="libreria.html">Libreria</a></li>
-                <li class="navli"><a href="papeleria.html">Papeleria</a></li> 
-                <li class="navli"><a href="cafe.html">Cafe</a></li>
-            </ul>
-        </nav>
+
+    <div class="container">.
+        <!--Navegador:Home,Libreria,Cafe,Papeleria,Registro-->
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="libreria.html">Libreria</a></li>
+                        <li><a href="papeleria.html">Papeleria</a></li>
+                        <li class="active"><a href="cafe.html">Cafe</a></li>
+                        <li><a href="hojaderegistro.html">Registro</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+
         <!--Tabla con los precios de cafe-->
-        <table>
+        <table class="table">
             <tr>
                 <td>
-                    <img src="/img/cafenegro.jpg">
+                    <img src="img/cafenegro.JPG">
                     <p><strong>Cafe Negro</strong></p>
                     <p>Precio: $.80</p>
                 </td>
 
                 <td>
-                    <img src='/img/cafeconleche.jpg'>
+                    <img src='img/cafeconleche.jpg'>
                     <p><strong>Cafe con Leche</strong></p>
                     <p>Precio: $1.00</p>
 
                 </td>
 
                 <td>
-                    <img src="/img/cafefrio.jpg">
+                    <img src="img/cafefrio.jpg">
                     <p><strong>Cafe Frio</strong></p>
                     <p>Precio: $2.00</p>
                 </td>
@@ -52,12 +67,11 @@
     <!--Este es el footer de la pagina-->
     <footer>
         <hr />
-        <div>
-            <em>Copyright2014&copy;Coloquio Inc</em>
-            <br />
-            <a href="mailto:" mariatjimenez@upr.edu">mariatjimenez@upr.edu</a>
-        </div>
-
+         <div class="jumbotron">
+        <em>Copyright2014&copy;Coloquio Inc</em>
+        <br />
+        <a href="mailto:" mariatjimenez@upr.edu ">mariatjimenez@upr.edu</a>
+    </div>                                         
     </footer>
 </body>
 </html>

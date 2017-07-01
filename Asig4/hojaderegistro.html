@@ -1,26 +1,32 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 
 <html lang="es">
 <head>
 
-
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/coloquio.css" />
 	<title>Coloquio-Cafe</title>
 </head>
 <body>
 	<header>
-		<!--Banner y Navbar-->
-		<h1><img src="/img/logo.png" style="height: 300px; width: 300px;">Coloquio</h1>
-
-		<!--Navegador:Home,Libreria,Cafe,Papeleria-->
-		<nav>
-			<a href="index.html">Home</a> |
-			<a href="libreria.html">Libreria</a> |
-			<a href="papeleria.html">Papeleria</a> |
-			<a href="cafe.html">Cafe</a>
-		</nav>
+        <!--Banner y Navbar-->
+        <h1><img src="img/logo.png" />Coloquio</h1>
+        <h2><em>Libreria, Cafe y Papeleria </em></h2>
+        </header>
+           
+        <!--Navegador:Home,Libreria,Cafe,Papeleria,Registro-->
+        <nav>
+            <ul class="navul">
+                <li class="navli"><a href="index.html">Home</a></li>
+                <li class="navli"><a href="libreria.html">Libreria</a></li>
+                <li class="navli"><a href="papeleria.html">Papeleria</a></li>
+                <li class="navli"><a href="cafe.html">Cafe</a></li>
+                <li class="navli"><a href="hojaderegistro.html">Registro</a></li>
+            </ul>
+        </nav>
 		<br />
 		<em>Libreria, Cafe y Papeleria </em>
-	</header>
+	
     <div>
         <h1>Hoja de Registro</h1>
         <form action="http://mtj-web.com/ecomm02/registro.php" method="post">
@@ -43,7 +49,7 @@
                     <td><input type="password" name="password1" size="15" maxlength="15" required></td>
                 </tr>
                 <tr>
-                    <td><p>Repita Contraseña</p></td>
+                    <td><p>Repita Contraseï¿½a</p></td>
                     <td><input type="password" name="password2" size="20" maxlength="35" required></td>
                 </tr>
             </table>
@@ -59,14 +65,14 @@
 
             <p>
                 Interes Principal
-                <select name="interés principal">
+                <select name="interï¿½s principal">
                     <option value="lib">Libreria</option>
                     <option value="pap">Papeleria</option>
                     <option value="caf">Cafe</option>
                 </select>
             </p>
             <p>
-                <input type="checkbox" checked name="opción anuncios" /> Deseo Sabes sobrectividades y ofertas
+                <input type="checkbox" checked name="opciï¿½n anuncios" /> Deseo Sabes sobrectividades y ofertas
             </p>
             <br />
             <p><em>Al registrarme aceptos los terminos de servicio y politica de privacidad de Coloquio</em></p>
