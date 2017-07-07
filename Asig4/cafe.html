@@ -59,14 +59,26 @@
         </table>
     </div>
 
-     <!--Este es el footer de la pagina-->
+       <!--Este es el footer de la pagina-->
+    <div class="container-fluid" id=footer>
+        <div class="row">
+            <div class="col-sm-4"> <em>Copyright2014&copy;Coloquio Inc</em>
+                <br /> <a href="mailto: mariatjimenez@upr.edu">mariatjimenez@upr.edu</a> <a href="mailto:mariatjimenez@upr.edu"><span class="glyphicon glyphicon-envelope"></span></a> </div>
+            <div class="col-sm-4"> <em>Fech Actual: </em> <em onload="myFunction()" id="fechaactual"></em>
+                <script>
+                    var d = new Date("July 6, 201 6:44:00");
+                    document.getElementById("fechaactual").innerHTML = d;
 
-        <div class="container-fluid" id=footer>
-
-                <em>Copyright2014&copy;Coloquio Inc</em>
-                <br />
-                <a href="mailto: mariatjimenez@upr.edu">mariatjimenez@upr.edu</a> <a href="mailto:mariatjimenez@upr.edu"><span class="glyphicon glyphicon-envelope"></span></a>
+                </script>
             </div>
+            <div class="col-sm-4"> <em>Fecha Modificado En:</em><em id=fechamodificadoen></em>
+                <script>
+                    document.getElementById("fechamodificadoen").innerHTML = Date();
+
+                </script>
+            </div>
+        </div>
+    </div>
     </body>
 </html>
 

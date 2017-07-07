@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -8,24 +7,20 @@
     <link rel="stylesheet" href="css/coloquio.css" />
     <title>Coloquio-Inicio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+    </head>
 
 <body>
-
-      <div class="jumbotron" class="header">
-            <!--Banner y Navbar-->
-            <h1><img src="img/logo.png" width="304" height="236" />Coloquio</h1>
-            <h2><em>Libreria, Cafe y Papeleria </em></h2>
-        </div>
-
-
-
+    <div class="jumbotron" class="header">
+        <!--Banner y Navbar-->
+        <h1><img src="img/logo.png" width="304" height="236" />Coloquio</h1>
+        <h2><em>Libreria, Cafe y Papeleria </em></h2>
+    </div>
     <div class="container">.
         <!--Navegador:Home,Libreria,Cafe,Papeleria,Registro-->
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
-                   <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs">
                         <li class="active"><a href="index.html">Home</a></li>
                         <li><a href="libreria.html">Libreria</a></li>
                         <li><a href="papeleria.html">Papeleria</a></li>
@@ -34,27 +29,19 @@
                     </ul>
                 </div>
             </nav>
-
         </div>
-
         <div class="row">
             <div class="col-sm-8">
-
-               <div class="container">
-                  <h2>Bienvenidos a Coloquio</h2>
-               </div>
-
+                <div class="container">
+                    <h2>Bienvenidos a Coloquio</h2>
+                </div>
                 <!--Primera Seccion Quienes-->
                 <h2>Quienes</h2>
-                <p>
-                    <strong>Coloquio</strong>es una iniciativa de un grupo de amantes de la literatura, las artes y el teatro interesados en crear un espacio de encuentro y dialogo en un ambiente informal y acogedor
-                </p>
+                <p> <strong>Coloquio</strong>es una iniciativa de un grupo de amantes de la literatura, las artes y el teatro interesados en crear un espacio de encuentro y dialogo en un ambiente informal y acogedor </p>
                 <br />
-
                 <!--Segunda Seccion Donde-->
                 <h2>Donde</h2>
-                <dl>
-                    <dt><p><strong>Coloquio</strong> ocupa un espacio historico en el casco urbano de Rio Piedras:</p></dt>
+                <dl> <dt><p><strong>Coloquio</strong> ocupa un espacio historico en el casco urbano de Rio Piedras:</p></dt>
                     <dd>Edif. Antigua Alcaldia de Rio Piedras Ave.Ponce de Leon #123</dd>
                     <dd>Rio.Piedras PR 00931</dd>
                     <dd>787-757-9999</dd>
@@ -67,17 +54,13 @@
                 <div>Sabados y Domingos de 10:30am a 3:00pm</div>
                 <br />
                 <br />
-
                 <!--Cuarta division-->
-
                 <h2>Que</h2>
-
                 <p>En<strong> Coloquio</strong> encontrarás:</p>
                 <ul>
                     <li>La Libreria: Una interesante seleccion curada por sus fundadores, asociados y amigos</li>
                     <li>La Papeleria:En Coloqui aun amamos el papel: Tenemos una amplia sleccion de papeleria y utensilios de escritura.</li>
-                    <li>
-                        El Cafe: Ven y date un respiro, comparte con amigos, trabaja. En el Cafe encontraras:
+                    <li> El Cafe: Ven y date un respiro, comparte con amigos, trabaja. En el Cafe encontraras:
                         <ul>
                             <li>Buen Cafe</li>
                             <li>Desayuno</li>
@@ -90,14 +73,11 @@
                 <br />
                 <br />
                 <!--Este es el footer de la pagina-->
-
             </div>
-
             <div class="col-sm-4">
                 <aside>
                     <h3>Eventos</h3>
-                    <dl>
-                        <dt><strong>nov, 3 alas 7:00pm</strong></dt>
+                    <dl> <dt><strong>nov, 3 alas 7:00pm</strong></dt>
                         <dd>Presentacion del libro:</dd>
                         <dd>Polemicoas:politica, intelectuales</dd>
                         <dd>violencia de Carlos Pabon</dd>
@@ -107,15 +87,26 @@
         </div>
     </div>
     <hr />
-
     <!--Este es el footer de la pagina-->
+    <div class="container-fluid" id=footer>
+        <div class="row">
+            <div class="col-sm-4"> <em>Copyright2014&copy;Coloquio Inc</em>
+                <br /> <a href="mailto: mariatjimenez@upr.edu">mariatjimenez@upr.edu</a> <a href="mailto:mariatjimenez@upr.edu"><span class="glyphicon glyphicon-envelope"></span></a> </div>
+            <div class="col-sm-4"> <em>Fech Actual: </em> <em onload="myFunction()" id="fechaactual"></em>
+                <script>
+                    var d = new Date("July 6, 201 6:44:00");
+                    document.getElementById("fechaactual").innerHTML = d;
 
-        <div class="container-fluid" id=footer>
-
-                <em>Copyright2014&copy;Coloquio Inc</em>
-                <br />
-                <a href="mailto: mariatjimenez@upr.edu">mariatjimenez@upr.edu</a> <a href="mailto:mariatjimenez@upr.edu"><span class="glyphicon glyphicon-envelope"></span></a>
+                </script>
             </div>
+            <div class="col-sm-4"> <em>Fecha Modificado En:</em><em id=fechamodificadoen></em>
+                <script>
+                    document.getElementById("fechamodificadoen").innerHTML = Date();
 
-    </body>
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

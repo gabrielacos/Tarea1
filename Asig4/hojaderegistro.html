@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -8,18 +7,33 @@
     <link rel="stylesheet" href="css/coloquio.css" />
     <title>Coloquio-Inicio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+       window.onload = function() {
+  var input = document.getElementById("focusbox").focus();
+}
+    </script>
+       <script>
+           function password_validation() {
+  var password1 = document.forms["formaregistro"]["password1"].value;
+  var password2 = document.forms["formaregistro"]["password2"].value;
+
+  if (password1 != password2 || password1.length < 5) {
+    alert("Passwords needs to be more than five characters and equally. Please, try again.");
+    document.getElementById('password1').focus();
+    document.getElementById('password1').value = "";
+    document.getElementById('password2').value = "";
+    return false;
+  }
+}
+    </script>
 </head>
 
 <body>
-
     <div class="jumbotron" class="header">
         <!--Banner y Navbar-->
         <h1><img src="img/logo.png" width="304" height="236" />Coloquio</h1>
         <h2><em>Libreria, Cafe y Papeleria </em></h2>
     </div>
-
-
-
     <div class="container">.
         <!--Navegador:Home,Libreria,Cafe,Papeleria,Registro-->
         <div class="container">
@@ -34,101 +48,92 @@
                     </ul>
                 </div>
             </nav>
-
         </div>
         <div class="container"></div>
-
         <h1>Hoja de Registro</h1>
-
-        <form action="http://mtj-web.com/ecomm02/registro.php" method="post">
+        <form action="http://mtj-web.com/ecomm02/registro.php" name="formaregistro" method="post" onsubmit="password_validation()">
             <div class="container">
                 <div class="form-group row">
                     <label for="example-text-input" class="col-2 col-form-label">Nombre</label>
                     <div class="col-10">
-                        <input class="form-control" type="text" name="nombre" size="30" maxlength="30" required>
-                    </div>
+                        <input class="form-control" id="focusbox" type="text" name="nombre" size="30" maxlength="30" required> </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-2 col-form-label">Apellidos</label>
                     <div class="col-10">
-                        <input class="form-control" type="text" name="apellidos" size="30" maxlength="30" required>
-                    </div>
+                        <input class="form-control" type="text" name="apellidos" size="30" maxlength="30" required> </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-2 col-form-label">Email</label>
                     <div class="col-10">
-                        <input class="form-control" type="email" name="email" size="30" maxlength="30" required>
-                    </div>
+                        <input class="form-control" type="email" name="email" size="30" maxlength="30" required> </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-2 col-form-label">Contrasena</label>
                     <div class="col-10">
-                        <input class="form-control" type="password" name="password1" size="30" maxlength="30" required>
-                    </div>
+                        <input class="form-control" id="password1" type="password" name="password1" size="30" maxlength="30" required> </div>
                 </div>
                 <div class="form-group row">
                     <label for="example-text-input" class="col-2 col-form-label">Repita Contrasena</label>
                     <div class="col-10">
-                        <input class="form-control" type="password" name="password2" size="30" maxlength="30" required>
-                    </div>
+                        <input class="form-control" id="password2" type="password" name="password2" size="30" maxlength="30" required> </div>
                 </div>
                 <fieldset class="form-group">
                     <legend>Genero</legend>
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="genero" id="inlineRadio1" value="M"> Masculino
-                </label>
+                            <input class="form-check-input" type="radio" name="genero" id="inlineRadio1" value="M"> Masculino </label>
                     </div>
-
                     <div class="form-check form-check-inline">
                         <label class="form-check-label">
-    <input class="form-check-input" type="radio" name="genero" id="inlineRadio2" value="F">Femenina
-  </label>
+                            <input class="form-check-input" type="radio" name="genero" id="inlineRadio2" value="F">Femenina </label>
                     </div>
                 </fieldset>
-
                 <div class="form-group">
                     <label for="disabledSelect">Interes Principal</label>
                     <select class="form-control" name="inter�s principal">
-                    <option value="lib">Libreria</option>
-                    <option value="pap">Papeleria</option>
-                    <option value="caf">Cafe</option>
-                </select>
+                        <option value="lib">Libreria</option>
+                        <option value="pap">Papeleria</option>
+                        <option value="caf">Cafe</option>
+                    </select>
                 </div>
-
                 <div class="form-group row">
-                    <label class="col-sm-2">
-                </label>
+                    <label class="col-sm-2"> </label>
                     <div class="col-sm-10">
                         <div class="form-check">
                             <label class="form-check-label">
-            <input class="form-check-input" type="checkbox"  checked name="opci�n anuncios">Deseo saber sobreactividades y ofertas
-          </label>
+                                <input class="form-check-input" type="checkbox" checked name="opci�n anuncios">Deseo saber sobreactividades y ofertas </label>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <button type="submit" class="btn btn-success">Submit</button>
-                <button type="reset" class="btn btn-danger">Borrar</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-default">Borrar</button>
             </div>
         </form>
-
         <br>
-        <br>
+        <br> </div>
+    <!--Este es el footer de la pagina-->
+    <div class="container-fluid" id=footer>
+        <div class="row">
+            <div class="col-sm-4"> <em>Copyright2014&copy;Coloquio Inc</em>
+                <br /> <a href="mailto: mariatjimenez@upr.edu">mariatjimenez@upr.edu</a> <a href="mailto:mariatjimenez@upr.edu"><span class="glyphicon glyphicon-envelope"></span></a> </div>
+            <div class="col-sm-4"> <em>Fech Actual: </em> <em onload="myFunction()" id="fechaactual"></em>
+                <script>
+                    var d = new Date("July 6, 201 6:44:00");
+                    document.getElementById("fechaactual").innerHTML = d;
 
-    </div>
-
- <!--Este es el footer de la pagina-->
-
-        <div class="container-fluid" id=footer>
-
-                <em>Copyright2014&copy;Coloquio Inc</em>
-                <br />
-                <a href="mailto: mariatjimenez@upr.edu">mariatjimenez@upr.edu</a> <a href="mailto:mariatjimenez@upr.edu"><span class="glyphicon glyphicon-envelope"></span></a>
+                </script>
             </div>
+            <div class="col-sm-4"> <em>Fecha Modificado En:</em><em id=fechamodificadoen></em>
+                <script>
+                    document.getElementById("fechamodificadoen").innerHTML = Date();
 
-
+                </script>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
